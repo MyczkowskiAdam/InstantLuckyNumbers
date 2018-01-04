@@ -1,0 +1,11 @@
+apply plugin: 'com.android.instantapp'
+
+dependencies {
+    implementation project(':getyournumber')
+    implementation project(':base')
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    def htextview_version = "0.1.2"
+    compile "com.hanks:htextview-base:$htextview_version"
+    compile "com.hanks:htextview-fade:$htextview_version"
+    implementation 'com.android.support:design:27.0.2'
+}

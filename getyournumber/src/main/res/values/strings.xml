@@ -1,0 +1,10 @@
+<resources>
+    <!-- LuckyNumbers -->
+    <string name="app_greetings">Welcome to Lucky Numbers! This simple application will calculate your lucky number!</string>
+    <string name="enter_fname">Enter your first name here</string>
+    <string name="enter_lname">Enter your last name here</string>
+
+    <!-- Descriptions -->
+    <string name="process_desc">Run Lucky Numbers process</string>
+    <string name="reset_desc">Reset fields</string>
+</resources>

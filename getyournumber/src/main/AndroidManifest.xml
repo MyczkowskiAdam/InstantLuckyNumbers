@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.luckynumbers.mycax.instantluckynumbers.getyournumber">
+
+    <application>
+        <activity android:name=".MainActivity">
+            <intent-filter android:order="1">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="mycax.luckynumbers.com"
+                    android:pathPattern="/getyournumber"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "mycax.luckynumbers://getyournumberinstant” -->
+                <data android:scheme="mycax.luckynumbers"
+                    android:host="getyournumberinstant" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://mycax.luckynumbers/getyournumberinstatnt” -->
+                <data android:scheme="http"
+                    android:host="mycax.luckynumbers"
+                    android:pathPrefix="/getyournumberinstant"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

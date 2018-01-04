@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.luckynumbers.mycax.instantluckynumbers.getyournumber.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <com.hanks.htextview.fade.FadeTextView
+        android:id="@+id/output_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lastName"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/firstName"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_fname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Greetings"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextSize="20sp"
+        app:met_baseColor="@android:color/black"
+        app:met_textColor="@android:color/black"
+        app:met_primaryColor="@color/colorPrimary"
+        app:met_floatingLabelTextColor="@color/colorPrimary"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/lastName"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_lname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstName"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextSize="20sp"
+        app:met_baseColor="@android:color/black"
+        app:met_textColor="@android:color/black"
+        app:met_primaryColor="@color/colorPrimary"
+        app:met_floatingLabelTextColor="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/Greetings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/app_greetings"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonReset"
+        android:contentDescription="@string/process_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="120dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="@+id/lastName"
+        app:layout_constraintTop_toTopOf="@+id/lastName"
+        app:srcCompat="@drawable/ic_refresh_grey_24dp" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCalculate"
+        android:contentDescription="@string/reset_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="120dp"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="@+id/lastName"
+        app:layout_constraintTop_toTopOf="@+id/lastName"
+        app:srcCompat="@drawable/ic_done_grey_24dp" />
+
+</android.support.constraint.ConstraintLayout>
